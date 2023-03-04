@@ -1,4 +1,4 @@
-package com.unofficailProject.runners;
+package net.upgenix.runners;
 
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;

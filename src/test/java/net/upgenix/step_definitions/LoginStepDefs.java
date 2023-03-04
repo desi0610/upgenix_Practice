@@ -1,8 +1,9 @@
-package com.unofficailProject.step_definitions;
+package net.upgenix.step_definitions;
 
-import com.unofficailProject.pages.LoginPage;
-import com.unofficailProject.utilities.ConfigurationReader;
+import net.upgenix.pages.LoginPage;
+import net.upgenix.utilities.ConfigurationReader;
 import io.cucumber.java.en.Given;
+
 public class LoginStepDefs {
 
 

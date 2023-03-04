@@ -1,11 +1,11 @@
-package com.unofficailProject.step_definitions;
+package net.upgenix.step_definitions;
 
 
 
 
-import com.unofficailProject.utilities.BrowserUtils;
-import com.unofficailProject.utilities.ConfigurationReader;
-import com.unofficailProject.utilities.Driver;
+import net.upgenix.utilities.BrowserUtils;
+import net.upgenix.utilities.ConfigurationReader;
+import net.upgenix.utilities.Driver;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;

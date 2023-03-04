@@ -1,7 +1,7 @@
-package com.unofficailProject.pages;
+package net.upgenix.pages;
 
 
-import com.unofficailProject.utilities.Driver;
+import net.upgenix.utilities.Driver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;

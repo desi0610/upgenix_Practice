@@ -1,4 +1,4 @@
-package com.unofficailProject.utilities;
+package net.upgenix.utilities;
 
 import java.io.FileInputStream;
 import java.io.IOException;

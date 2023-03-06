@@ -1,6 +1,6 @@
 Feature: User login and account name
 
-  User Story: As sales and expense manager, I want to Login with valid credentials and get my account name
+  User Story 13: As sales and expense manager, I want to Login with valid credentials and get my account name
 
   Background:
     Given the user is on the login page

@@ -10,7 +10,7 @@ public abstract class BasePage {
 
     //US1
     @FindBy(xpath = "//span[normalize-space()='Sales']")
-    public WebElement SalesPage;
+    public WebElement SalesPage; // naming convention starts with lower case
 
 
     //US2  , US11

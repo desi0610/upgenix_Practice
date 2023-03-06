@@ -5,7 +5,7 @@ Feature: Sales page functionality
   Background: For all scenarios user is on the login page
     Given the user is on the login page
 
-  @wip
+
   Scenario Outline: Sales page verification for the quotations for POS manager
 
     When user login using "<email>" and "<password>"

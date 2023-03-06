@@ -1,6 +1,8 @@
 package net.upgenix.pages;
 
 
+import net.upgenix.utilities.Driver;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
@@ -68,5 +70,11 @@ public abstract class BasePage {
     @FindBy(xpath = "(//tbody)[5]/tr/td/span")
     public List<WebElement> timeList;
 
+// Adding method to click on the different pages based on the text of the sub menu
+    public void clickMenuByText(String text){
+        String locator = "(//span[contains(.,'"+text+"')])";
+        WebElement element = Driver.getDriver().findElement(By.xpath(locator));
 
+
+    }
 }

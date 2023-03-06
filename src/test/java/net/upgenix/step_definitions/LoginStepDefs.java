@@ -38,7 +38,7 @@ public class LoginStepDefs {
         }
 
             //send username and password and login
-        new LoginPage().login(username,password);
+       new LoginPage().login(username,password);
     }
 
     @Given("the user logged in with username as {string} and password as {string}")

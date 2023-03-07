@@ -4,7 +4,7 @@ Feature: User login and account name
 
   Background:
     Given the user is on the login page
-
+@wip
   Scenario Outline: Verify user information <email>
     When user login using "<email>" and "<password>"
     Then account holder name should be "<name>"

@@ -1,10 +1,10 @@
-Feature: User login and account name
+Feature: User valid login and account name
 
   User Story 13: As sales and expense manager, I want to Login with valid credentials and get my account name
 
   Background:
     Given the user is on the login page
-@wip
+
   Scenario Outline: Verify user information <email>
     When user login using "<email>" and "<password>"
     Then account holder name should be "<name>"
@@ -17,7 +17,7 @@ Feature: User login and account name
       | salesmanager67@info.com | salesmanager | salesmanager67 |
       | salesmanager89@info.com | salesmanager | salesmanager89 |
 
-    @expenseManager
+    @expensesManager
     Examples:
       | email                      | password        | name              |
       | expensesmanager55@info.com | expensesmanager | expensesmanager55 |

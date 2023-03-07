@@ -4,7 +4,7 @@ Feature: Repairs page functionality
 
   Background: For all scenarios users are on the login page
     Given the user is on the login page
-@wip
+
   Scenario Outline: POS and Sales managers are able to see repairs orders
     When user login using "<email>" and "<password>"
     And user clicks on the Repairs page

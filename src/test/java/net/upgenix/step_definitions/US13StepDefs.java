@@ -5,7 +5,6 @@ import io.cucumber.java.en.When;
 import net.upgenix.pages.DiscussPage;
 import net.upgenix.pages.LoginPage;
 import net.upgenix.utilities.BrowserUtils;
-import net.upgenix.utilities.Driver;
 import org.junit.Assert;
 
 public class US13StepDefs {

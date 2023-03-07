@@ -1,4 +1,4 @@
-Feature: User login and account name
+Feature: User valid login and account name
 
   User Story 13: As sales and expense manager, I want to Login with valid credentials and get my account name
 
@@ -17,7 +17,7 @@ Feature: User login and account name
       | salesmanager67@info.com | salesmanager | salesmanager67 |
       | salesmanager89@info.com | salesmanager | salesmanager89 |
 
-    @expenseManager
+    @expensesManager
     Examples:
       | email                      | password        | name              |
       | expensesmanager55@info.com | expensesmanager | expensesmanager55 |

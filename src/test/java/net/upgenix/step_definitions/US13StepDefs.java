@@ -24,7 +24,7 @@ public class US13StepDefs {
         BrowserUtils.sleep(3);
 
         String actual = discussPage.profileName.getText();
-       Assert.assertTrue(discussPage.profileName.getText().equalsIgnoreCase(string) );
+       Assert.assertTrue(actual.equalsIgnoreCase(string) );
 
 
 

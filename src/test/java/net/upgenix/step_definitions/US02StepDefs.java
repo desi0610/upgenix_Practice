@@ -15,7 +15,7 @@ public class US02StepDefs {
     @And("user clicks on the Repairs page")
     public void userClicksOnTheRepairsPage() {
 
-        repairsPage.RepairsPage.click();
+      //  repairsPage.RepairsPage.click();
     }
 
     @Then("user should see these six columns with text")

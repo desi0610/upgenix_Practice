@@ -14,4 +14,9 @@ public class DiscussPage extends BasePage {
 
     @FindBy(xpath = "//span[@class='oe_topbar_name']")
     public WebElement profileName;
+
+    @FindBy(xpath = "(//span[@class='oe_menu_text'])[22]")//from 1 to 22
+    public WebElement modules22;
+
+    //span[normalize-space()='Discuss'] // to maybe create a dynamic locator
 }

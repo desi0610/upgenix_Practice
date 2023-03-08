@@ -1,27 +1,34 @@
 package net.upgenix.pages;
 
 
-import net.upgenix.utilities.Driver;
-import org.openqa.selenium.By;
+import net.upgenix.utilities.BrowserUtils;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-
+import java.util.ArrayList;
 import java.util.List;
 
-public abstract class BasePage {
+public class BasePage {
 
     //US1
     @FindBy(xpath = "//span[normalize-space()='Sales']")
-    public WebElement SalesPage; // naming convention starts with lower case
+    public WebElement salesPage;
+
+    @FindBy(xpath = "//th[@class='o_column_sortable']")
+    public List<WebElement> quotationsColumnsPage;
 
 
     //US2  , US11
     @FindBy(xpath = "//span[normalize-space()='Repairs']")
-    public WebElement RepairsPage;
+    public WebElement repairsPage;
+
+
+    @FindBy(xpath = "//th[@class='o_column_sortable']")
+    public List<WebElement> repairColumnsPage;
 
     //US3 , US4 , US7 ,US8 , US9
-    @FindBy(xpath = "(//div[@class='navbar-collapse collapse']//ul)[1]")
+    @FindBy(xpath = "//ul[contains(@class,'oe_application_menu_placeholder')]//li//span")
     //div[@class='navbar-collapse collapse']
+    //(//div[@class='navbar-collapse collapse']/ul//span) -->whole top manu bar all text + icons
     public List<WebElement> mainModules;
     // optional for user story 4 or 3 or 7  or 8 or 9://span[@class='oe_topbar_name']
 
@@ -29,20 +36,27 @@ public abstract class BasePage {
     @FindBy(xpath = "(//span[normalize-space()='Point of Sale'])[1]")
     public WebElement pointOfSalesPage;
     @FindBy(xpath = "(//span[normalize-space()='Orders'])[3]")
-    public WebElement OrdersButton;
+    public WebElement ordersButton;
     @FindBy(xpath = "//th[@class='o_list_record_selector']//input[@type='checkbox']")
     public WebElement orderRefCheckBox;
     @FindBy(xpath = "//button[normalize-space()='Action']")
     public WebElement actionButton;
+
+    @FindBy(xpath = "(//ul[@class='dropdown-menu'])[4]//li")
+    public List<WebElement> actionSubMenu;
+    @FindBy(xpath = "//table//input")
+    public List<WebElement> allCheckBoxOrderSelected;
+
 
     //U6
     @FindBy(xpath = "//span[@class='oe_topbar_name']")
     public WebElement profileButton;
     @FindBy(xpath = "//a[.='Documentation']")
     public WebElement docPage;
-    @FindBy(xpath = "//h1[@class='text-white']")
+    @FindBy(xpath = "//div[@id='wrap']//h1")
     public WebElement odooDoc;
-
+    @FindBy(xpath = "//h2")
+    public List<WebElement> fourDocTopic;
     //section[@class='o_content_fw_banner']/following-sibling::* select all the topic
     @FindBy(xpath = "(//a[.='User Docs'])[2]")
     public WebElement userDocTopic;
@@ -56,12 +70,20 @@ public abstract class BasePage {
     //US10
     @FindBy(xpath = "(//span[normalize-space()='Quotations'])[2]")
     public WebElement quotationsButton;
-    @FindBy(xpath = "//th[@class='o_list_record_selector']//input[@type='checkbox']")
-    public WebElement quotationsBox;
+
+    @FindBy(xpath = "(//input[@type='checkbox'] )[3]")
+    public WebElement quotationsNumberCheckBox;
+
+    @FindBy(xpath = "//table//input")
+    public List<WebElement> quotationsAllBoxSelected;
 
     //US11
     @FindBy(xpath = "//th[@class='o_list_record_selector']//input[@type='checkbox']")
-    public WebElement repairsBox;
+    public WebElement repairsCheckBox;
+
+    @FindBy(xpath = "//table//input")
+    public List<WebElement> repairAllCheckBoxSelected;
+
 
     //US14
     @FindBy(xpath = "//span[normalize-space()='Calendar']")
@@ -70,10 +92,53 @@ public abstract class BasePage {
     @FindBy(xpath = "(//tbody)[5]/tr/td/span")
     public List<WebElement> timeList;
 
-// Adding method to click on the different pages based on the text of the sub menu
-    public void clickMenuByText(String text){
-        String locator = "(//span[contains(.,'"+text+"')])";
-        WebElement element = Driver.getDriver().findElement(By.xpath(locator));
+
+//    public static int mainModulesTitles() {
+//        BasePage basePageModules = new BasePage();
+//        List<WebElement> listOfMenuBar = basePageModules.mainModules;
+//        List<String> getListOfMenuBar = BrowserUtils.getElementsText(listOfMenuBar);
+//        List<String> allModules = new ArrayList<>();
+//
+//        int count = -1;
+//        for (String eachTitle : getListOfMenuBar) {
+//            if (!eachTitle.equals("More")) {
+//                allModules.addAll(getListOfMenuBar);
+//                count++;
+//            }
+//        }
+//
+//       // String modules = String.valueOf(allModules);
+//        return count;
+//    }
+
+    public static int mainModulesTitles() {
+        BasePage basePageModules = new BasePage();
+        List<WebElement> listOfMenuBar = basePageModules.mainModules;
+        List<String> getListOfMenuBar = BrowserUtils.getElementsText(listOfMenuBar);
+        List<String> allModules = new ArrayList<>();
+        int count = -1;
+        for (String eachTitle : getListOfMenuBar) {
+
+                allModules.addAll(getListOfMenuBar);
+                count++;
+
+        }
+        return count ;
+
+
+    }
+
+    public static List<String> listMainModulesTitlesString() {
+        BasePage basePageModules = new BasePage();
+        List<WebElement> listOfMenuBar = basePageModules.mainModules;
+        List<String> getListOfMenuBar = BrowserUtils.getElementsText(listOfMenuBar);
+        List<String> allModules = new ArrayList<>();
+        for (String eachTitle : getListOfMenuBar) {
+
+            allModules.addAll(getListOfMenuBar);
+        }
+
+        return allModules ;
 
 
     }

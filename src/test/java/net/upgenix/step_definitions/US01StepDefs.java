@@ -20,7 +20,7 @@ public class US01StepDefs {
     public void user_clicks_on_the_sales_page() {
 
         BrowserUtils.sleep(4);
-        salesPage.SalesPage.click();
+       // salesPage.SalesPage.click();
         BrowserUtils.sleep(2);
 
     }

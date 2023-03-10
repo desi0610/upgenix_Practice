@@ -19,17 +19,17 @@ public class LoginStepDefs {
         String password =null;
 
         if(userType.equalsIgnoreCase("POS_Manager")){
-            username = ConfigurationReader.getProperty("posmanager6@info.com");
-            password = ConfigurationReader.getProperty("posmanager");
+            username = ConfigurationReader.getProperty("PosManager_username");
+            password = ConfigurationReader.getProperty("PosManager_password");
         }else if(userType.equalsIgnoreCase("sales_Manager")){
-            username = ConfigurationReader.getProperty("salesmanager10@info.com");
-            password = ConfigurationReader.getProperty("salesmanager");
+            username = ConfigurationReader.getProperty("SalesManager_username");
+            password = ConfigurationReader.getProperty("SalesManager_password");
         }else if(userType.equalsIgnoreCase("CRM_Manager")){
-            username = ConfigurationReader.getProperty("eventscrmmanager10@info.com");
-            password = ConfigurationReader.getProperty("eventscrmmanager");
+            username = ConfigurationReader.getProperty("CrmManager_username");
+            password = ConfigurationReader.getProperty("CrmManager_password");
         }else if(userType.equalsIgnoreCase("Inventory_Manager")) {
-            username = ConfigurationReader.getProperty("imm10@info.com");
-            password = ConfigurationReader.getProperty("inventorymanager");
+            username = ConfigurationReader.getProperty("InventoryManager_username");
+            password = ConfigurationReader.getProperty("InventoryManager_password");
 
 
         }else if(userType.equalsIgnoreCase("Expenses_Manager")) {

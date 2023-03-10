@@ -1,6 +1,4 @@
 package net.upgenix.pages;
-
-
 import net.upgenix.utilities.BrowserUtils;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -11,24 +9,16 @@ public class BasePage {
 
     //US1
     @FindBy(xpath = "//span[normalize-space()='Sales']")
-    public WebElement salesPage;
-
-    @FindBy(xpath = "//th[@class='o_column_sortable']")
-    public List<WebElement> quotationsColumnsPage;
+    public WebElement SalesPage;
 
 
     //US2  , US11
     @FindBy(xpath = "//span[normalize-space()='Repairs']")
-    public WebElement repairsPage;
-
-
-    @FindBy(xpath = "//th[@class='o_column_sortable']")
-    public List<WebElement> repairColumnsPage;
+    public WebElement RepairsPage;
 
     //US3 , US4 , US7 ,US8 , US9
-    @FindBy(xpath = "//ul[contains(@class,'oe_application_menu_placeholder')]//li//span")
+    @FindBy(xpath = "(//div[@class='navbar-collapse collapse']//ul)[1]")
     //div[@class='navbar-collapse collapse']
-    //(//div[@class='navbar-collapse collapse']/ul//span) -->whole top manu bar all text + icons
     public List<WebElement> mainModules;
     // optional for user story 4 or 3 or 7  or 8 or 9://span[@class='oe_topbar_name']
 
@@ -36,27 +26,20 @@ public class BasePage {
     @FindBy(xpath = "(//span[normalize-space()='Point of Sale'])[1]")
     public WebElement pointOfSalesPage;
     @FindBy(xpath = "(//span[normalize-space()='Orders'])[3]")
-    public WebElement ordersButton;
+    public WebElement OrdersButton;
     @FindBy(xpath = "//th[@class='o_list_record_selector']//input[@type='checkbox']")
     public WebElement orderRefCheckBox;
     @FindBy(xpath = "//button[normalize-space()='Action']")
     public WebElement actionButton;
-
-    @FindBy(xpath = "(//ul[@class='dropdown-menu'])[4]//li")
-    public List<WebElement> actionSubMenu;
-    @FindBy(xpath = "//table//input")
-    public List<WebElement> allCheckBoxOrderSelected;
-
 
     //U6
     @FindBy(xpath = "//span[@class='oe_topbar_name']")
     public WebElement profileButton;
     @FindBy(xpath = "//a[.='Documentation']")
     public WebElement docPage;
-    @FindBy(xpath = "//div[@id='wrap']//h1")
+    @FindBy(xpath = "//h1[@class='text-white']")
     public WebElement odooDoc;
-    @FindBy(xpath = "//h2")
-    public List<WebElement> fourDocTopic;
+
     //section[@class='o_content_fw_banner']/following-sibling::* select all the topic
     @FindBy(xpath = "(//a[.='User Docs'])[2]")
     public WebElement userDocTopic;
@@ -70,20 +53,12 @@ public class BasePage {
     //US10
     @FindBy(xpath = "(//span[normalize-space()='Quotations'])[2]")
     public WebElement quotationsButton;
-
-    @FindBy(xpath = "(//input[@type='checkbox'] )[3]")
-    public WebElement quotationsNumberCheckBox;
-
-    @FindBy(xpath = "//table//input")
-    public List<WebElement> quotationsAllBoxSelected;
+    @FindBy(xpath = "//th[@class='o_list_record_selector']//input[@type='checkbox']")
+    public WebElement quotationsBox;
 
     //US11
     @FindBy(xpath = "//th[@class='o_list_record_selector']//input[@type='checkbox']")
-    public WebElement repairsCheckBox;
-
-    @FindBy(xpath = "//table//input")
-    public List<WebElement> repairAllCheckBoxSelected;
-
+    public WebElement repairsBox;
 
     //US14
     @FindBy(xpath = "//span[normalize-space()='Calendar']")
